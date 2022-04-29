@@ -1,5 +1,16 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  const splitWord = word.split('');
+  const reverseSplitWord = [];
+  for (const letter of splitWord) {
+    reverseSplitWord.unshift(letter);
+  }
+  const reverseWord = reverseSplitWord.join('');
+  if (word === reverseWord) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /* 
@@ -23,3 +34,5 @@ if (require.main === module) {
 }
 
 module.exports = isPalindrome;
+
+console.log(isPalindrome('spercalifragilistsic')) ;
